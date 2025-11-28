@@ -1,0 +1,32 @@
+# Docker ignore file
+.git
+.gitignore
+README.md
+DOCKER.md
+
+# Backend specific
+backend/venv
+backend/.env
+backend/__pycache__
+backend/**/__pycache__
+backend/*.pyc
+backend/.pytest_cache
+backend/htmlcov
+backend/.coverage
+
+# Frontend specific
+frontend/node_modules
+frontend/dist
+frontend/.env.local
+
+# Data directories (will be mounted as volumes)
+uploads/*
+models/*.pkl
+models/*.joblib
+
+# Development files
+*.md
+!README.md
+.vscode
+.idea
+*.log
