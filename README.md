@@ -18,95 +18,45 @@ Upload PDF, DOCX, or TXT documents and automatically:
 
 ## Quick Start
 
-### With Docker (Recommended)
-
 ```bash
-./docker-setup.sh
+make up
 ```
 
 Then open http://localhost
 
-### Manual Setup
+## Requirements
 
-**Backend:**
+- Docker & Docker Compose
+- That's it! No local Python or Node.js needed.
+
+## Development
+
+Run in development mode with hot reload:
+
 ```bash
-cd backend
-./setup.sh
-source venv/bin/activate
-python main.py
+docker-compose -f docker-compose.dev.yml up
 ```
 
-**Frontend:**
+## Other Commands
+
+**Stop the app:**
 ```bash
-cd frontend
-./setup.sh
-npm run dev
+make down
 ```
 
-## Features
-
-- ✅ Multiple file formats (PDF, DOCX, TXT)
-- ✅ Smart section detection (headers, visual breaks, structure)
-- ✅ ML-powered relevance scoring
-- ✅ Named entity recognition (people, orgs, dates, money)
-- ✅ Drag-and-drop interface
-- ✅ Adjustable threshold filtering
-- ✅ Batch processing
-- ✅ Training mode (improve with feedback)
-- ✅ Modern dark UI with animations
-
-## How It Works
-
-1. **Upload** → Document is parsed and text extracted
-2. **Segment** → Split into logical sections using pattern detection
-3. **Analyze** → Extract features (numbers, entities, structure)
-4. **Score** → ML classifier rates relevance (0-100%)
-5. **Filter** → Show sections above threshold
-6. **Export** → Download as JSON or TXT
-
-## Technology
-
-- **Backend:** FastAPI, PyMuPDF, python-docx, spaCy, scikit-learn
-- **Frontend:** React, Vite, Tailwind CSS
-- **Deployment:** Docker, Docker Compose
-
-## Documentation
-
-- [DOCKER.md](DOCKER.md) - Complete Docker guide with deployment, troubleshooting
-- [API Docs](http://localhost:8000/docs) - Interactive API documentation (when running)
-
-## Project Structure
-
-```
-sectify/
-├── backend/          # FastAPI + ML
-├── frontend/         # React UI
-├── docker-compose.yml
-└── docker-setup.sh   # One-command setup
+**Clean uploads and models:**
+```bash
+make clean
 ```
 
 ## Configuration
 
-Edit `.env` or environment variables in `docker-compose.yml`:
+Copy `.env.example` to `.env` and customize settings:
 
-```env
-API_PORT=8000
-DEFAULT_THRESHOLD=0.5
-MIN_SECTION_LENGTH=20
+```bash
+cp .env.example .env
 ```
 
 ## Contributing
 
-Contributions welcome! The system uses:
-- **Document Parser** - Handles PDF/DOCX/TXT
-- **Section Segmenter** - Detects sections
-- **Feature Extractor** - Analyzes text
-- **ML Classifier** - Scores relevance (heuristics + Random Forest)
-
-## License
-
-MIT License
-
----
-
-**Need help?** See [DOCKER.md](DOCKER.md) for detailed documentation.
+You can contribute to this project by submitting issues or pull requests.
