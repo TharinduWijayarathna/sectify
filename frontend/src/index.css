@@ -15,52 +15,52 @@
   .glass {
     @apply bg-white/10 backdrop-blur-md border border-white/20;
   }
-  
+
   .glass-dark {
     @apply bg-slate-900/60 backdrop-blur-md border border-slate-700/50;
   }
-  
+
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-500 to-accent-500 text-white font-semibold;
+    @apply bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold;
     @apply px-6 py-3 rounded-lg shadow-lg hover:shadow-xl;
     @apply transform hover:scale-105 transition-all duration-200;
     @apply disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
   }
-  
+
   .btn-secondary {
     @apply glass text-white font-semibold px-6 py-3 rounded-lg;
     @apply hover:bg-white/20 transition-all duration-200;
   }
-  
+
   .card {
     @apply glass-dark rounded-xl p-6 shadow-2xl;
     @apply hover:shadow-purple-500/10 transition-all duration-300;
   }
-  
+
   .input {
     @apply glass-dark px-4 py-3 rounded-lg w-full;
-    @apply focus:outline-none focus:ring-2 focus:ring-primary-500;
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500;
     @apply placeholder-slate-400 text-white;
   }
-  
+
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent;
   }
-  
+
   .section-card {
     @apply glass-dark rounded-lg p-4 mb-3;
     @apply border-l-4 transition-all duration-200;
     @apply hover:bg-slate-800/70 cursor-pointer;
   }
-  
+
   .section-card.high {
     @apply border-emerald-500 bg-emerald-500/5;
   }
-  
+
   .section-card.medium {
     @apply border-yellow-500 bg-yellow-500/5;
   }
-  
+
   .section-card.low {
     @apply border-red-500 bg-red-500/5;
   }
@@ -71,21 +71,21 @@
     background-size: 200% 200%;
     animation: gradient 8s ease infinite;
   }
-  
+
   .scrollbar-thin::-webkit-scrollbar {
     width: 6px;
   }
-  
+
   .scrollbar-thin::-webkit-scrollbar-track {
     @apply bg-slate-800/50 rounded;
   }
-  
+
   .scrollbar-thin::-webkit-scrollbar-thumb {
-    @apply bg-primary-500/50 rounded;
+    @apply bg-blue-500/50 rounded;
   }
-  
+
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary-500;
+    @apply bg-blue-500;
   }
 }
 
@@ -94,9 +94,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
