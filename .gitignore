@@ -46,6 +46,7 @@ models/*.pkl
 models/*.joblib
 .env
 .env.local
+.env.docker
 
 # OS
 .DS_Store
